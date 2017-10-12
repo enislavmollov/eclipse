@@ -19,11 +19,13 @@ public class AppTest
     @Test
 	public void testApp()
     {
-    	String exePath = "/Users/enislavmollov/Downloads/chromedriver";
+    	String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
 		System.setProperty("webdriver.chrome.driver", exePath);
 		WebDriver driver = new ChromeDriver();
 
-		driver.get("http://www.google.com");
+		driver.get("http://demo.guru99.com/selenium/guru99home/");  
+		String title = driver.getTitle();				 
+		AssertJUnit.assertTrue(title.contains("Demo Guru99 Page"));
 
 		System.out.println("Success");
 		
