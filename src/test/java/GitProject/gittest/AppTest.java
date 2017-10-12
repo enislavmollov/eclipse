@@ -2,6 +2,7 @@ package GitProject.gittest;
 
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,23 +15,12 @@ import org.testng.AssertJUnit;
  */
 public class AppTest
 {
-    /**
-     * Create the test case
-     *
-     * @param testName name of the test case
-     */
-    public AppTest( String testName )
-    {
-    }
 
-    /**
-     * Rigourous Test :-)
-     */
     @Test
 	public void testApp()
     {
-    	String exePath = "/Users/enislavmollov/Downloads/chromedriver";
-		System.setProperty("webdriver.chrome.driver", exePath);
+    	//String exePath = "/Users/enislavmollov/Downloads/chromedriver";
+		System.setProperty("webdriver.chrome.driver", "/Users/enislavmollov/Downloads/chromedriver");
 		WebDriver driver = new ChromeDriver();
 
 		driver.get("http://beta.capecloud.ch");
