@@ -19,7 +19,7 @@ public class AppTest
     @Test
 	public void testApp()
     {
-    	String exePath = "/Users/enislavmollov/Downloads/chromedriver";
+    	String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
 		System.setProperty("webdriver.chrome.driver", exePath);
 		WebDriver driver = new ChromeDriver();
 
