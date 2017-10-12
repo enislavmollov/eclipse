@@ -25,7 +25,7 @@ public class AppTest
 
 		driver.get("http://demo.guru99.com/selenium/guru99home/");  
 		String title = driver.getTitle();				 
-		AssertJUnit.assertTrue(title.contains("Demo Guru99 Page"));
+		AssertJUnit.assertTrue(title.contains("Demo Guru99 Pageeee"));
 
 		System.out.println("Success");
 		
