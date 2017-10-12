@@ -23,7 +23,7 @@ public class AppTest
 		System.setProperty("webdriver.chrome.driver", exePath);
 		WebDriver driver = new ChromeDriver();
 
-		driver.get("http://google.com");
+		driver.get("klklkle");
 
 		System.out.println("Success");
 		
