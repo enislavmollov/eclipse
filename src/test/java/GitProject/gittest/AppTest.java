@@ -58,7 +58,7 @@ public class AppTest
 		
 		System.out.println("Success");
 						
-		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[data-mdlname='ccM4']")));
+		//wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[data-mdlname='ccM4']")));
 		
 		System.out.println("xpath");
 		
