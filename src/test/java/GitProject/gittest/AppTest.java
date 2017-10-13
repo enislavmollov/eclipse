@@ -35,7 +35,7 @@ public class AppTest
 		System.setProperty("webdriver.chrome.driver", exePath);
 		WebDriver driver = new ChromeDriver();
 		
-		driver.manage().window().setSize(new Dimension(200, 200));
+		driver.manage().window().setSize(new Dimension(800, 600));
 		
 		System.out.println(driver.manage().window().getSize());
 		
