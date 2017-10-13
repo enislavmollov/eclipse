@@ -7,6 +7,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 import java.util.List;
 import java.util.ListIterator;
@@ -53,12 +54,12 @@ public class AppTest
 
 		String title = driver.getTitle();				 
 		
-		//wait.until(ExpectedConditions.urlToBe("http://beta.capecloud.ch/#/"));
+		wait.until(ExpectedConditions.urlToBe("http://beta.capecloud.ch/#/"));
 
 		
 		System.out.println("Success");
 						
-		//wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[data-mdlname='ccM4']")));
+		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[data-mdlname='ccM4']")));
 		
 		System.out.println("xpath");
 		
