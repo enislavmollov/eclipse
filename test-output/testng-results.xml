@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="4784" started-at="2017-10-13T14:19:17Z" finished-at="2017-10-13T14:19:22Z">
+  <suite name="Default suite" duration-ms="5314" started-at="2017-10-13T14:21:32Z" finished-at="2017-10-13T14:21:37Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="4784" started-at="2017-10-13T14:19:17Z" finished-at="2017-10-13T14:19:22Z">
+    <test name="Default test" duration-ms="5314" started-at="2017-10-13T14:21:32Z" finished-at="2017-10-13T14:21:37Z">
       <class name="GitProject.gittest.AppTest">
-        <test-method status="PASS" signature="testApp()[pri:0, instance:GitProject.gittest.AppTest@55d56113]" name="testApp" duration-ms="4768" started-at="2017-10-13T17:19:17Z" finished-at="2017-10-13T17:19:22Z">
+        <test-method status="PASS" signature="testApp()[pri:0, instance:GitProject.gittest.AppTest@55d56113]" name="testApp" duration-ms="5293" started-at="2017-10-13T17:21:32Z" finished-at="2017-10-13T17:21:37Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testApp -->
