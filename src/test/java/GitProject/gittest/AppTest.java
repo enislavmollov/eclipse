@@ -13,6 +13,7 @@ import java.util.List;
 import java.util.ListIterator;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -34,6 +35,8 @@ public class AppTest
 		WebDriver driver = new ChromeDriver();
 
 		driver.get("http://beta.capecloud.ch"); 
+		
+		driver.manage().window().setSize(new Dimension(1024, 768));
 		
 		
 		WebDriverWait wait = new WebDriverWait(driver, 15);
