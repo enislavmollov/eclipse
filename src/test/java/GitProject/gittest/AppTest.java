@@ -8,6 +8,7 @@ import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
 import org.testng.annotations.Test;
+import org.testng.annotations.Test;
 
 import java.util.List;
 import java.util.ListIterator;
@@ -36,7 +37,7 @@ public class AppTest
 
 		driver.get("http://beta.capecloud.ch"); 
 		
-		driver.manage().window().setSize(new Dimension(1024, 768));
+		driver.manage().window().setSize(new Dimension(1920, 1080));
 		
 		
 		WebDriverWait wait = new WebDriverWait(driver, 15);
