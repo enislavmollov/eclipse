@@ -19,7 +19,6 @@ public class albums {
 
 			driver.get("http://beta.capecloud.ch"); 
 			
-			driver.manage().window().maximize();
 			
 			WebDriverWait wait = new WebDriverWait(driver, 15);
 
