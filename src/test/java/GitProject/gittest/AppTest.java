@@ -41,6 +41,8 @@ public class AppTest
 		
 		driver.get("http://beta.capecloud.ch"); 
 		
+		driver.manage().window().setSize(new Dimension(1920, 1080));
+		
 		System.out.println(driver.manage().window().getSize());
 		
 		
