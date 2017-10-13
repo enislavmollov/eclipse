@@ -35,13 +35,13 @@ public class AppTest
 		System.setProperty("webdriver.chrome.driver", exePath);
 		WebDriver driver = new ChromeDriver();
 		
-		driver.manage().window().setSize(new Dimension(1920, 1080));
+		driver.manage().window().setSize(new Dimension(640, 640));
 		
 		System.out.println(driver.manage().window().getSize());
 		
 		driver.get("http://beta.capecloud.ch"); 
 		
-		driver.manage().window().maximize();
+		//driver.manage().window().maximize();
 		
 		System.out.println(driver.manage().window().getSize());
 		
