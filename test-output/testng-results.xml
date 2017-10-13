@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="2620" started-at="2017-10-12T12:44:29Z" finished-at="2017-10-12T12:44:31Z">
+  <suite name="Default suite" duration-ms="24804" started-at="2017-10-13T11:54:49Z" finished-at="2017-10-13T11:55:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="2620" started-at="2017-10-12T12:44:29Z" finished-at="2017-10-12T12:44:31Z">
+    <test name="Default test" duration-ms="24804" started-at="2017-10-13T11:54:49Z" finished-at="2017-10-13T11:55:14Z">
       <class name="GitProject.gittest.AppTest">
-        <test-method status="PASS" signature="testApp()[pri:0, instance:GitProject.gittest.AppTest@55d56113]" name="testApp" duration-ms="2607" started-at="2017-10-12T15:44:29Z" finished-at="2017-10-12T15:44:31Z">
+        <test-method status="PASS" signature="testApp()[pri:0, instance:GitProject.gittest.AppTest@10bdf5e5]" name="testApp" duration-ms="16974" started-at="2017-10-13T14:54:49Z" finished-at="2017-10-13T14:55:06Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testApp -->
       </class> <!-- GitProject.gittest.AppTest -->
+      <class name="Albums.albums">
+        <test-method status="PASS" signature="f()[pri:0, instance:Albums.albums@78c03f1f]" name="f" duration-ms="7817" started-at="2017-10-13T14:55:06Z" finished-at="2017-10-13T14:55:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+      </class> <!-- Albums.albums -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

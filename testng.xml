@@ -4,6 +4,7 @@
   <test name="Test">
     <classes>
       <class name="GitProject.gittest.AppTest"/>
+      <class name="Albums.albums"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
