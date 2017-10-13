@@ -34,12 +34,11 @@ public class AppTest
     	String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
 		System.setProperty("webdriver.chrome.driver", exePath);
 		WebDriver driver = new ChromeDriver();
-
-		driver.get("http://beta.capecloud.ch"); 
 		
 		driver.manage().window().setSize(new Dimension(1920, 1080));
 		
-		
+		driver.get("http://beta.capecloud.ch"); 
+						
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 
 		// Enter credentials
