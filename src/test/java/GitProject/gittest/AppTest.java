@@ -37,6 +37,8 @@ public class AppTest
 		
 		driver.manage().window().setSize(new Dimension(1920, 1080));
 		
+		System.out.println(driver.manage().window().getSize());
+		
 		driver.get("http://beta.capecloud.ch"); 
 						
 		WebDriverWait wait = new WebDriverWait(driver, 15);
