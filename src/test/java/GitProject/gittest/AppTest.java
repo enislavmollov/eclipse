@@ -39,7 +39,7 @@ public class AppTest
 		
 		System.out.println(driver.manage().window().getSize());
 		
-		driver.get("https://www.abv.bg/"); 
+		driver.get("https://www.apple.com/"); 
 		
 		driver.manage().window().setSize(new Dimension(800, 600));
 		
