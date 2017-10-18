@@ -21,16 +21,11 @@ public class AppTest
     @Test
 	public void testApp() throws InterruptedException
     {
-    	String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
-		System.setProperty("webdriver.chrome.driver", exePath);
+    	//String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
+		//System.setProperty("webdriver.chrome.driver", exePath);
 		final List<String> optionArray = new ArrayList<String>();
-	            optionArray.add("--disable-web-security");
-	            optionArray.add("--incognito");
-	            optionArray.add("--disable-gpu");
-	            optionArray.add("--start-maximized");
-	            optionArray.add("--app-shell-host-window-size=1400x1000");
-	            optionArray.add("--content-shell-host-window-size=1400x1000");
-	            optionArray.add("--window-size=1400,1000");
+	           
+	        optionArray.add("--window-size=800,1000");
 	        ChromeOptions options = new ChromeOptions();
 	        options.addArguments(optionArray);
 		WebDriver driver = new ChromeDriver(options);
