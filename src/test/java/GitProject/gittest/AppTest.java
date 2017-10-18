@@ -42,7 +42,7 @@ public class AppTest
 		
 		System.out.println(driver.manage().window().getSize());
 		
-
+/*
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 
 		// Enter credentials
@@ -91,6 +91,6 @@ public class AppTest
 		System.out.println(newsPresents);
 		
 		//driver.quit();
-
+*/
     }
 }
