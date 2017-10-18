@@ -1,26 +1,16 @@
 package GitProject.gittest;
 
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-import org.testng.annotations.Test;
-
+import java.util.ArrayList;
 import java.util.List;
-import java.util.ListIterator;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
 
 /**
  * Unit test for simple App.
@@ -33,22 +23,25 @@ public class AppTest
     {
     	String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
 		System.setProperty("webdriver.chrome.driver", exePath);
-		WebDriver driver = new ChromeDriver();
+		final List<String> optionArray = new ArrayList<String>();
+	            optionArray.add("--disable-web-security");
+	            optionArray.add("--incognito");
+	            optionArray.add("--disable-gpu");
+	            optionArray.add("--start-maximized");
+	            optionArray.add("--app-shell-host-window-size=1400x1000");
+	            optionArray.add("--content-shell-host-window-size=1400x1000");
+	            optionArray.add("--window-size=1400,1000");
+	        ChromeOptions options = new ChromeOptions();
+	        options.addArguments(optionArray);
+		WebDriver driver = new ChromeDriver(options);
 		
+		
+		driver.get("http://beta.capecloud.ch/#logIn"); 
 		
 		
 		System.out.println(driver.manage().window().getSize());
 		
-		driver.get("https://www.apple.com/"); 
-		
-		driver.manage().window().setSize(new Dimension(800, 600));
-		
-		//driver.manage().window().maximize();
-		
-		System.out.println(driver.manage().window().getSize());
-		
-		
-		/*
+
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 
 		// Enter credentials
@@ -98,6 +91,5 @@ public class AppTest
 		
 		//driver.quit();
 
-		 */
     }
 }
