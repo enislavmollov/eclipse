@@ -35,6 +35,7 @@ public class AppTest
 	        options.addArguments(optionArray);
 		WebDriver driver = new ChromeDriver(options);
 		
+		System.out.println(driver.manage().window().getSize());
 		
 		driver.get("http://beta.capecloud.ch/#logIn"); 
 		
