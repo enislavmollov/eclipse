@@ -51,11 +51,11 @@ public class AppTest
 		
 		System.out.println(driver.manage().window().getSize());
 		
-
+		/*
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 
 		// Enter credentials
-/*
+
 		driver.findElement(By.id("username")).sendKeys("adminuser");
 
 		driver.findElement(By.id("password")).sendKeys("testing");
