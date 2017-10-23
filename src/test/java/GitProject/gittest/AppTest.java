@@ -1,5 +1,6 @@
 package GitProject.gittest;
 
+import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,8 +22,8 @@ public class AppTest
     @Test
 	public void testApp() throws InterruptedException
     {
-    	//String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
-		//System.setProperty("webdriver.chrome.driver", exePath);
+
+    	
 		final List<String> optionArray = new ArrayList<String>();
 	           
 	        optionArray.add("--window-size=800,1000");
@@ -30,14 +31,21 @@ public class AppTest
 	        options.addArguments(optionArray);
 		WebDriver driver = new ChromeDriver(options);
 		
+		
+		//String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
+		//System.setProperty("webdriver.chrome.driver", exePath);
+		//WebDriver driver = new ChromeDriver();
+		
 		System.out.println(driver.manage().window().getSize());
 		
 		driver.get("http://beta.capecloud.ch/#logIn"); 
 		
+		driver.manage().window().maximize();
+		
 		
 		System.out.println(driver.manage().window().getSize());
 		
-/*
+
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 
 		// Enter credentials
@@ -86,6 +94,6 @@ public class AppTest
 		System.out.println(newsPresents);
 		
 		//driver.quit();
-*/
+
     }
 }
