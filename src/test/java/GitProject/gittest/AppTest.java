@@ -10,6 +10,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
@@ -24,15 +25,19 @@ public class AppTest
 	public void testApp() throws InterruptedException
     {
 
-    	
+    	/*
 		final List<String> optionArray = new ArrayList<String>();
 	           
 	        optionArray.add("--window-size=800,1000");
 	        ChromeOptions options = new ChromeOptions();
 	        options.addArguments(optionArray);
 		WebDriver driver = new ChromeDriver(options);
+		*/
 		
-		
+    	String exePath = "/Users/enislavmollov/Downloads/geckodriver";
+		System.setProperty("webdriver.gecko.driver", exePath);
+		WebDriver driver = new FirefoxDriver();
+    	
 		//String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
 		//System.setProperty("webdriver.chrome.driver", exePath);
 		//WebDriver driver = new ChromeDriver();
