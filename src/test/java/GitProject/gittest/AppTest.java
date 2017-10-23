@@ -34,8 +34,8 @@ public class AppTest
 		WebDriver driver = new ChromeDriver(options);
 		*/
 		
-    	//String exePath = "/Users/enislavmollov/Downloads/geckodriver";
-		//System.setProperty("webdriver.gecko.driver", exePath);
+    	String exePath = "/Users/Shared/Jenkins/Home/geckodriver";
+		System.setProperty("webdriver.gecko.driver", exePath);
 		WebDriver driver = new FirefoxDriver();
     	
 		//String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
