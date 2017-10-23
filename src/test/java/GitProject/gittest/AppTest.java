@@ -50,7 +50,7 @@ public class AppTest
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 
 		// Enter credentials
-
+/*
 		driver.findElement(By.id("username")).sendKeys("adminuser");
 
 		driver.findElement(By.id("password")).sendKeys("testing");
@@ -95,6 +95,6 @@ public class AppTest
 		System.out.println(newsPresents);
 		
 		//driver.quit();
-
+*/
     }
 }
