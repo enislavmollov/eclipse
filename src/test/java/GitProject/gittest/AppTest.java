@@ -44,14 +44,14 @@ public class AppTest
 		System.setProperty("webdriver.chrome.driver", exePath);
 		WebDriver driver = new ChromeDriver();
 		
-		//System.out.println(driver.manage().window().getSize());
+		System.out.println(driver.manage().window().getSize());
 		
-		driver.get("http://beta.capecloud.ch/#logIn"); 
+		driver.get("http://ch/#logI"); 
 		
-		//driver.manage().window().setSize(new Dimension(1024, 768));
+		driver.manage().window().setSize(new Dimension(1024, 768));
 		
 		
-		//System.out.println(driver.manage().window().getSize());
+		System.out.println(driver.manage().window().getSize());
 		
 		
 		WebDriverWait wait = new WebDriverWait(driver, 15);
