@@ -46,7 +46,7 @@ public class AppTest
 		
 		System.out.println(driver.manage().window().getSize());
 		
-		driver.get("http://ch/#logI"); 
+		driver.get("http://beta.capecloud.ch/#logIn"); 
 		
 		driver.manage().window().setSize(new Dimension(1024, 768));
 		
