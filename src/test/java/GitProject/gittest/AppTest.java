@@ -1,5 +1,6 @@
 package GitProject.gittest;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,33 +33,34 @@ public class AppTest
 	        ChromeOptions options = new ChromeOptions();
 	        options.addArguments(optionArray);
 		WebDriver driver = new ChromeDriver(options);
-		*/
+		
 		
     	String exePath = "/Users/Shared/Jenkins/Home/geckodriver";
 		System.setProperty("webdriver.gecko.driver", exePath);
 		WebDriver driver = new FirefoxDriver();
+    	*/
     	
-		//String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
-		//System.setProperty("webdriver.chrome.driver", exePath);
-		//WebDriver driver = new ChromeDriver();
+		String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
+		System.setProperty("webdriver.chrome.driver", exePath);
+		WebDriver driver = new ChromeDriver();
 		
-		System.out.println(driver.manage().window().getSize());
+		//System.out.println(driver.manage().window().getSize());
 		
 		driver.get("http://beta.capecloud.ch/#logIn"); 
 		
-		driver.manage().window().setSize(new Dimension(1024, 768));
+		//driver.manage().window().setSize(new Dimension(1024, 768));
 		
 		
-		System.out.println(driver.manage().window().getSize());
+		//System.out.println(driver.manage().window().getSize());
 		
-		/*
+		
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 
 		// Enter credentials
 
 		driver.findElement(By.id("username")).sendKeys("adminuser");
 
-		driver.findElement(By.id("password")).sendKeys("testing");
+		driver.findElement(By.id("password")).sendKeys("hasmipele");
 
 		driver.findElement(By.id("sign-in")).click();
 
@@ -77,8 +79,6 @@ public class AppTest
 						
 		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[data-mdlname='ccM4']")));
 		
-		System.out.println("xpath");
-		
 				
 		driver.findElement(By.cssSelector("button[data-mdlname='ccM4']")).click();
 
@@ -86,20 +86,26 @@ public class AppTest
 		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("ul.select2-selection__rendered li")));
 		
 		Boolean isPresent = driver.findElements(By.cssSelector("ul.select2-selection__rendered li")).size() > 0;
-		
-		System.out.println(isPresent);
-		
-		List<WebElement> allElements = driver.findElements(By.cssSelector("ul.select2-selection__rendered li"));
-		
-		for (WebElement element: allElements) {
-		      System.out.println(element.getText());
+		if(isPresent){
+			
+			
+			System.out.println(isPresent);
+			
+			List<WebElement> allElements = driver.findElements(By.cssSelector("ul.select2-selection__rendered li"));
+			
+			for (WebElement element: allElements) {
+			      System.out.println(element.getText());
+			}
+			
+			Boolean newsPresents = driver.findElements(By.cssSelector(".dbProjectsTable .feed_item")).size() == 0;
+			
+			System.out.println(newsPresents);
 		}
 		
-		Boolean newsPresents = driver.findElements(By.cssSelector(".dbProjectsTable .feed_item")).size() == 0;
-		
-		System.out.println(newsPresents);
-		
+		else{
+		Assert.fail();
+		}
 		//driver.quit();
-*/
+
     }
 }
