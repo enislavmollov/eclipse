@@ -26,7 +26,7 @@ public class AppTest
 	public void testApp() throws InterruptedException
     {
 
-    	
+    	/*
 		final List<String> optionArray = new ArrayList<String>();
 	           
 	        optionArray.add("--window-size=800,1000");
@@ -35,14 +35,14 @@ public class AppTest
 		WebDriver driver = new ChromeDriver(options);
 		
 		
-    	//String exePath = "/Users/Shared/Jenkins/Home/geckodriver";
-		//System.setProperty("webdriver.gecko.driver", exePath);
-		//WebDriver driver = new FirefoxDriver();
+    	String exePath = "/Users/Shared/Jenkins/Home/geckodriver";
+		System.setProperty("webdriver.gecko.driver", exePath);
+		WebDriver driver = new FirefoxDriver();
     	
-    	
-		//String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
-		//System.setProperty("webdriver.chrome.driver", exePath);
-		//WebDriver driver = new ChromeDriver();
+    	*/
+		String exePath = "C:\\Program Files (x86)\\Jenkins\\workspace\\chromedriver";
+		System.setProperty("webdriver.chrome.driver", exePath);
+		WebDriver driver = new ChromeDriver();
 		
 		System.out.println(driver.manage().window().getSize());
 		
