@@ -40,7 +40,8 @@ public class AppTest
 		WebDriver driver = new FirefoxDriver();
     	*/
     	
-		String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
+		//String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
+    	String exePath = "C:/qf_projects/chromedriver";
 		System.setProperty("webdriver.chrome.driver", exePath);
 		WebDriver driver = new ChromeDriver();
 		
