@@ -40,22 +40,20 @@ public class AppTest
 		WebDriver driver = new FirefoxDriver();
     	
     	*/
-		String exePath = "C:\\Program Files (x86)\\Jenkins\\workspace\\chromedriver.exe";
+    	
+    	
+    	String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
+		//String exePath = "C:\\Program Files (x86)\\Jenkins\\workspace\\chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", exePath);
 		WebDriver driver = new ChromeDriver();
 		
 		System.out.println(driver.manage().window().getSize());
 		
 		driver.get("http://beta.capecloud.ch/#logIn"); 
+		
 		driver.manage().window().maximize();
-		System.out.println(driver.manage().window().getSize());
-		
-		driver.manage().window().setSize(new Dimension(2000, 1080));
-		
-		
-		System.out.println(driver.manage().window().getSize());
-		
-		
+
+				
 		WebDriverWait wait = new WebDriverWait(driver, 15);
 
 		// Enter credentials

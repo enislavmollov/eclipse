@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="GitProject.gittest.AppTest">
+      <class name="GitProject.gittest.messages">
         <methods>
-          <include name="testApp"/>
+          <include name="f"/>
         </methods>
-      </class> <!-- GitProject.gittest.AppTest -->
+      </class> <!-- GitProject.gittest.messages -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
