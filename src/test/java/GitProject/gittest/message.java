@@ -11,12 +11,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-public class messages {
+public class message {
   @Test
-  public void f() throws InterruptedException {
+  public void mess() throws InterruptedException {
 	  
-	 // String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
-		String exePath = "C:\\Program Files (x86)\\Jenkins\\workspace\\chromedriver.exe";
+	 String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
+		//String exePath = "C:\\Program Files (x86)\\Jenkins\\workspace\\chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", exePath);
 		WebDriver driver = new ChromeDriver();
 	  
