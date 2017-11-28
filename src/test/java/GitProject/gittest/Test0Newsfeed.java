@@ -21,7 +21,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * Unit test for simple App.
  */
-public class TestNewsfeed
+public class Test0Newsfeed
 {
 
     @Test

@@ -12,7 +12,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
-public class TestMessage {
+public class Test1Message {
   @Test
   public void mess() throws InterruptedException {
 	  
