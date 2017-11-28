@@ -122,6 +122,15 @@ public class Test1Message {
 		
 		System.out.println("Message sent");
 		
+		driver.findElement(By.id("ccMenuMsg")).click();
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[data-names='System User']")));
+		
+		String messCount = driver.findElement(By.cssSelector(".data-msgcounter")).getText();
+		
+		Assert.assertEquals(foundCount, "1");
+		
+		System.out.println("Message is there");
 		
 		Thread.sleep(5000);
 		

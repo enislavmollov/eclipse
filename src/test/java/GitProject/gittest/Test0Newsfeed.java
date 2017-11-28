@@ -17,6 +17,8 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import org.openqa.selenium.support.ui.WebDriverWait;
+//import org.junit.RunWith;
+
 
 /**
  * Unit test for simple App.
