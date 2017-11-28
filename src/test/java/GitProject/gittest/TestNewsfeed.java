@@ -7,6 +7,7 @@ import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Dimension;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -15,11 +16,12 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 /**
  * Unit test for simple App.
  */
-public class AppTest
+public class TestNewsfeed
 {
 
     @Test
@@ -42,10 +44,12 @@ public class AppTest
     	*/
     	
     	
-    	//String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
-		String exePath = "C:\\Program Files (x86)\\Jenkins\\workspace\\chromedriver.exe";
+    	String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
+		//String exePath = "C:\\Program Files (x86)\\Jenkins\\workspace\\chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", exePath);
 		WebDriver driver = new ChromeDriver();
+		
+		WebDriverWait wait = new WebDriverWait(driver, 15);
 		
 		System.out.println(driver.manage().window().getSize());
 		
@@ -53,8 +57,6 @@ public class AppTest
 		
 		driver.manage().window().maximize();
 
-				
-		WebDriverWait wait = new WebDriverWait(driver, 15);
 
 		// Enter credentials
 
@@ -66,7 +68,7 @@ public class AppTest
 
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("sms_code")));
 
-		driver.findElement(By.id("sms_code")).sendKeys("0");
+		driver.findElement(By.id("sms_code")).sendKeys("1994");
 
 		driver.findElement(By.id("sign-in")).click();
 
@@ -76,7 +78,40 @@ public class AppTest
 
 		
 		System.out.println("Success");
-						
+		
+		//Messages
+		Thread.sleep(10000);
+		
+		driver.findElement(By.id("ccMenuMsg")).click();
+		
+		Thread.sleep(5000);
+		
+		driver.findElement(By.cssSelector("[data-names='Web Driver']")).click();
+			
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".addTopic")));
+		
+		driver.findElement(By.cssSelector(".addTopic")).click();
+		
+		driver.findElement(By.cssSelector(".newTopicInputField")).sendKeys("azbuka");
+		
+		driver.findElement(By.cssSelector(".newTopicInputField")).sendKeys(Keys.ENTER);
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".cd-timeline-addCom")));
+		driver.findElement(By.cssSelector(".cd-timeline-addCom")).click();
+		
+		driver.findElement(By.id("newCommentId")).sendKeys("How are you");
+		
+		driver.findElement(By.id("submitNewCommentId")).click();
+		
+		Thread.sleep(5000);
+		
+		
+		System.out.println("Add new topic");
+		
+		
+		
+		//Newsfeed	
+		/*
 		wait.until(ExpectedConditions.elementToBeClickable(By.cssSelector("button[data-mdlname='ccM4']")));
 		
 				
@@ -104,7 +139,10 @@ public class AppTest
 		
 		else{
 		Assert.fail();
+		
 		}
+		*/
+		
 		//driver.quit();
 
     }

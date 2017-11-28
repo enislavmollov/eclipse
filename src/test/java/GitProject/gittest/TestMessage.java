@@ -3,6 +3,7 @@ package GitProject.gittest;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -15,8 +16,8 @@ public class TestMessage {
   @Test
   public void mess() throws InterruptedException {
 	  
-	 //String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
-		String exePath = "C:\\Program Files (x86)\\Jenkins\\workspace\\chromedriver.exe";
+	 String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
+		//String exePath = "C:\\Program Files (x86)\\Jenkins\\workspace\\chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", exePath);
 		WebDriver driver = new ChromeDriver();
 	  
@@ -34,7 +35,23 @@ public class TestMessage {
 
 		driver.findElement(By.id("sign-in")).click();
 		
-		Thread.sleep(5000);
+		Thread.sleep(15000);
+		
+		
+		wait.until(ExpectedConditions.elementToBeClickable(By.id("sms_code")));
+
+		driver.findElement(By.id("sms_code")).sendKeys("1994");
+
+		driver.findElement(By.id("sign-in")).click();
+
+		String title = driver.getTitle();				 
+		
+		wait.until(ExpectedConditions.urlToBe("http://beta.capecloud.ch/#/"));
+
+		
+		System.out.println("Success");
+		
+		/*
 	
 		driver.findElement(By.xpath(".//*[@id='originalForm']/div[3]/a/span")).click();
 		
@@ -66,7 +83,10 @@ public class TestMessage {
 		
 		driver.findElement(By.id("password")).sendKeys("Password.1");
 		
-		driver.findElement(By.id("loginBut")).click();;
+		driver.findElement(By.id("loginBut")).click();
+		
+		
+		
 		
 		Thread.sleep(5000);
 				
@@ -90,5 +110,28 @@ public class TestMessage {
 		wait.until(ExpectedConditions.urlToBe("http://beta.capecloud.ch/#/"));
 
 		System.out.println("Successful login");
+		
+		*/
+		
+		Thread.sleep(10000);
+				
+		String foundCount = driver.findElement(By.cssSelector(".ccMessNotif")).getText();
+	
+		
+		Assert.assertEquals(foundCount, "1");
+		
+		System.out.println("Message sent");
+		
+		
+		Thread.sleep(5000);
+		
+		//driver.findElement(By.cssSelector("[data-names='Anne Henke']")).click();
+		
+		//driver.findElement(By.xpath(".//*[@id='chatContactGroupList']/li[1]/div/div[2]/div")).click();
+		
+		
+		//driver.findElement(By.cssSelector(".listTopics .addTopic")).click();
+		
+		
   }
 }

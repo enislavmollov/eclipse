@@ -31,30 +31,25 @@ div.shootout {padding:2em;border:3px #4854A8 solid}
 <body>
 <table cellspacing="0" cellpadding="0" class="result">
 <tr><th>Test</th><th class="numi">Methods<br/>Passed</th><th class="numi">Scenarios<br/>Passed</th><th class="numi"># skipped</th><th class="numi"># failed</th><th class="numi">Total<br/>Time</th><th class="numi">Included<br/>Groups</th><th class="numi">Excluded<br/>Groups</th></tr>
-<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">67.2 seconds</td><td class="numi"></td><td class="numi"></td></tr>
+<tr><td style="text-align:left;padding-right:2em">Default test</td><td class="numi">1</td><td class="numi">1</td><td class="numi">0</td><td class="numi_attn">1</td><td class="numi">63.7 seconds</td><td class="numi"></td><td class="numi"></td></tr>
 </table>
 <table cellspacing="0" cellpadding="0" class="passed" id="summary">
 <tr><th>Class</th><th>Method</th><th># of<br/>Scenarios</th><th>Start</th><th>Time<br/>(ms)</th></tr>
 <tr><th colspan="4">Default test &#8212; failed</th></tr>
-<tr class="failedodd"><td rowspan="1">GitProject.gittest.message</td><td><a href="#m1"><b>mess</b>  </a></td><td class="numi">1</td><td>1511428839289</td><td class="numi">53786</td></tr>
+<tr class="failedodd"><td rowspan="1">GitProject.gittest.TestMessage</td><td><a href="#m1"><b>mess</b>  </a></td><td class="numi">1</td><td>1511860914743</td><td class="numi">31944</td></tr>
 <tr><th colspan="4">Default test &#8212; passed</th></tr>
-<tr class="passedodd"><td rowspan="1">GitProject.gittest.AppTest</td><td><a href="#m2"><b>testApp</b>  </a></td><td class="numi">1</td><td>1511428893084</td><td class="numi">13411</td></tr>
+<tr class="passedodd"><td rowspan="1">GitProject.gittest.TestNewsfeed</td><td><a href="#m2"><b>testApp</b>  </a></td><td class="numi">1</td><td>1511860883047</td><td class="numi">31693</td></tr>
 </table>
 <h1>Default test</h1>
-<h2 id="m1">GitProject.gittest.message:mess</h2>
+<h2 id="m1">GitProject.gittest.TestMessage:mess</h2>
 <div style="padding-left:3em">
-<p>Expected condition failed: waiting for url to be &quot;http://beta.capecloud.ch/#/&quot;. Current url: &quot;http://beta.capecloud.ch/#logIn&quot; (tried for 15 second(s) with 500 MILLISECONDS interval)
-Build info: version: &apos;unknown&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
-System info: host: &apos;Mac-mini-3.local&apos;, ip: &apos;fe80:0:0:0:14e8:db3a:a7b:b3ab%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.13.1&apos;, java.version: &apos;1.8.0_131&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.33.506106 (8a06c39c4582fbfbab6966dbb1c38a9173bfb1a2), userDataDir=/var/folders/7p/s_b_d2y11dx32m5y_cnktdwr0000gp/T/.org.chromium.Chromium.Jl6fuz}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=62.0.3202.94, platform=MAC, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, setWindowRect=true, unexpectedAlertBehaviour=}]
-Session ID: 1ddf13d7f5e49296ced9f4548b0da629</p>
-org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-<br/>at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
-<br/>at GitProject.gittest.message.mess(message.java:90)
+<p>expected:&lt;[2]&gt; but was:&lt;[1]&gt;</p>
+org.junit.Assert.assertEquals(Assert.java:115)
+<br/>at org.junit.Assert.assertEquals(Assert.java:144)
+<br/>at GitProject.gittest.TestMessage.mess(TestMessage.java:121)
 <br/>25 lines not shown
 </div>
 <p class="totop"><a href="#summary">back to summary</a></p>
-<h2 id="m2">GitProject.gittest.AppTest:testApp</h2>
+<h2 id="m2">GitProject.gittest.TestNewsfeed:testApp</h2>
 <p class="totop"><a href="#summary">back to summary</a></p>
 </body></html>
