@@ -44,8 +44,8 @@ public class TestNewsfeed
     	*/
     	
     	
-    	String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
-		//String exePath = "C:\\Program Files (x86)\\Jenkins\\workspace\\chromedriver.exe";
+    	//String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
+		String exePath = "C:\\Program Files (x86)\\Jenkins\\workspace\\chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", exePath);
 		WebDriver driver = new ChromeDriver();
 		
