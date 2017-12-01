@@ -7,8 +7,11 @@ import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
@@ -16,8 +19,8 @@ public class Test1Message {
   @Test
   public void mess() throws InterruptedException {
 	  
-	    //String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
-		String exePath = "C:\\Program Files (x86)\\Jenkins\\workspace\\chromedriver.exe";
+	    String exePath = "/Users/Shared/Jenkins/Home/chromedriver";
+		//String exePath = "C:\\Program Files (x86)\\Jenkins\\workspace\\chromedriver.exe";
 		System.setProperty("webdriver.chrome.driver", exePath);
 		WebDriver driver = new ChromeDriver();
 	  
@@ -35,7 +38,7 @@ public class Test1Message {
 
 		driver.findElement(By.id("sign-in")).click();
 		
-		Thread.sleep(15000);
+		Thread.sleep(5000);
 		
 		
 		wait.until(ExpectedConditions.elementToBeClickable(By.id("sms_code")));
@@ -114,7 +117,7 @@ public class Test1Message {
 		*/
 		
 		Thread.sleep(10000);
-				
+			
 		String foundCount = driver.findElement(By.cssSelector(".ccMessNotif")).getText();
 	
 		
@@ -126,13 +129,37 @@ public class Test1Message {
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[data-names='System User']")));
 		
-		String messCount = driver.findElement(By.cssSelector(".data-msgcounter")).getText();
+		//String messCount = driver.findElement(By.cssSelector("[class='listImage']")).getAttribute("data-msgcounter");
+			
+		//Assert.assertEquals(messCount, "1");
 		
-		Assert.assertEquals(foundCount, "1");
+		//System.out.println("Message is there");
 		
-		System.out.println("Message is there");
+		
+		
+		driver.findElement(By.cssSelector("[data-names='System User']")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.cssSelector("[data-name='azbuka']")).click();
+		Thread.sleep(2000);
+		
+		driver.findElement(By.cssSelector("#rightSide > h1 > button")).click();
+		Thread.sleep(2000);
+		
+		System.out.println("Edit but");
+		
+		//driver.findElement(By.cssSelector("[class='adminModal']")).click();
+		//Thread.sleep(2000);
+		
+		Select dropdown = new Select(driver.findElement(By.cssSelector("[class='adminModal']")));
+		
+		dropdown.selectByVisibleText("Delete topic");
+		
+		//driver.findElement(By.cssSelector("#rightSide > h1 > div.modalDropDown.active > ul > li:nth-child(2) > button")).click();
+		
 		
 		Thread.sleep(5000);
+		driver.findElement(By.xpath(".//button[contains(.,'Delete')]")).click();
 		
 		//driver.findElement(By.cssSelector("[data-names='Anne Henke']")).click();
 		

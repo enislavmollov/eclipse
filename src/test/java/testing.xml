@@ -4,6 +4,7 @@
     <classes>
       <class name="GitProject.gittest.Test0Newsfeed"/>
       <class name="GitProject.gittest.Test1Message"/>
+      <class name="GitProject.gittest.Test3FileAccesUpload"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
