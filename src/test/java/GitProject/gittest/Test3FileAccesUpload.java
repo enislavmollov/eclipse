@@ -94,7 +94,9 @@ public class Test3FileAccesUpload {
 		
 		Thread.sleep(5000);
 		
-		driver.findElement(By.id("getFile")).sendKeys("/Users/enislavmollov/Downloads/IMG_3127.PNG");
+		//driver.findElement(By.id("getFile")).sendKeys("/Users/enislavmollov/Downloads/IMG_3127.PNG");
+		driver.findElement(By.id("getFile")).sendKeys("C:\\Program Files (x86)\\Jenkins\\workspace\\chart.jpeg");
+		
 		
 		driver.findElement(By.id("displayName")).sendKeys("Document for test");
 		
