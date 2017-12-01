@@ -131,9 +131,10 @@ public class Test3FileAccesUpload {
 		
 		Thread.sleep(5000);
 		
-		boolean test = driver.findElements(By.xpath(".//a[contains(.,'Document for test')]")).size() == 0;
+		int test = driver.findElements(By.xpath(".//a[contains(.,'Document for test')]")).size();
 		
-		System.out.println(test);
+		Assert.assertEquals(test, 0);
+
 						
 		System.out.println("Success");
 	  

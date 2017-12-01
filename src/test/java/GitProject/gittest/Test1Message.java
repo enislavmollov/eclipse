@@ -129,11 +129,11 @@ public class Test1Message {
 		
 		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("[data-names='System User']")));
 		
-		//String messCount = driver.findElement(By.cssSelector("[class='listImage']")).getAttribute("data-msgcounter");
+		String messCount = driver.findElement(By.cssSelector("[class='listImage']")).getAttribute("data-msgcounter");
 			
-		//Assert.assertEquals(messCount, "1");
+		Assert.assertEquals(messCount, "1");
 		
-		//System.out.println("Message is there");
+		System.out.println("Message is there");
 		
 		
 		
@@ -146,20 +146,13 @@ public class Test1Message {
 		driver.findElement(By.cssSelector("#rightSide > h1 > button")).click();
 		Thread.sleep(2000);
 		
-		System.out.println("Edit but");
-		
-		//driver.findElement(By.cssSelector("[class='adminModal']")).click();
-		//Thread.sleep(2000);
-		
-		Select dropdown = new Select(driver.findElement(By.cssSelector("[class='adminModal']")));
-		
-		dropdown.selectByVisibleText("Delete topic");
-		
-		//driver.findElement(By.cssSelector("#rightSide > h1 > div.modalDropDown.active > ul > li:nth-child(2) > button")).click();
-		
-		
+				
+		driver.findElement(By.cssSelector("#rightSide > h1 > div > ul > li:nth-child(2)")).click();
 		Thread.sleep(5000);
-		driver.findElement(By.xpath(".//button[contains(.,'Delete')]")).click();
+		
+		wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#rightSide > h1 > div:nth-child(1) > button:nth-child(2)")));
+		
+		driver.findElement(By.cssSelector("#rightSide > h1 > div:nth-child(1) > button:nth-child(2)")).click();
 		
 		//driver.findElement(By.cssSelector("[data-names='Anne Henke']")).click();
 		
