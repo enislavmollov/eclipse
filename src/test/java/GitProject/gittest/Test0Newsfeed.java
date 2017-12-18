@@ -86,7 +86,7 @@ public class Test0Newsfeed
 		
 		driver.findElement(By.id("ccMenuMsg")).click();
 		
-		Thread.sleep(5000);
+		Thread.sleep(10000);
 		
 		driver.findElement(By.cssSelector("[data-names='Web Driver']")).click();
 			
